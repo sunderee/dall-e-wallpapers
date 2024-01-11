@@ -1,0 +1,23 @@
+# IDEs
+.idea
+.vscode
+.vagrant
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/vendor
+/node_modules
+
+# Builds
+/builds
+/.cache
+.phpunit.result.cache
+/_site
+
+# Lock files
+**/*.lock
+
+# Secrets
