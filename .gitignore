@@ -10,6 +10,8 @@ Thumbs.db
 # Dependencies
 /vendor
 /node_modules
+package-lock.json
+yarn.lock
 
 # Builds
 /builds
@@ -21,3 +23,4 @@ Thumbs.db
 **/*.lock
 
 # Secrets
+.env
