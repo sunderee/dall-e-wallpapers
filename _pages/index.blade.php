@@ -6,10 +6,13 @@
         <div class="grid grid-cols-1 gap-4 mt-8">
             @php
                 $images = Illuminate\Support\Facades\File::files(base_path('_media'));
+                $allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
             @endphp
 
             @foreach($images as $image)
-                <img src="/_media/{{ $image->getFilename() }}" alt="..." class="mx-auto">
+                @if(in_array($image->getExtension(), $allowedExtensions))
+                    <img src="/_media/{{ $image->getFilename() }}" alt="..." class="mx-auto">
+                @endif
             @endforeach
         </div>
     </main>
