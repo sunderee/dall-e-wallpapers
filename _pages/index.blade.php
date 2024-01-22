@@ -11,7 +11,7 @@
 
             @foreach($images as $image)
                 @if(in_array($image->getExtension(), $allowedExtensions))
-                    <img src="/_media/{{ $image->getFilename() }}" alt="..." class="mx-auto">
+                    <img src="{{ \Hyde\Facades\Asset::mediaLink($image->getFilename()) }}" alt="..." class="mx-auto">
                 @endif
             @endforeach
         </div>
